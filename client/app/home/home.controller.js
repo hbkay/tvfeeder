@@ -9,11 +9,7 @@ angular.module('tvfeeder')
     $scope.prevDate = (prevListing.data[0] ? prevListing.data[0].date : '');
     $scope.shows = thisDaysShows.data;
     
-    console.log("Today: ", todaysDate);
-    console.log($scope.shows);
-    
     $scope.setCurrShow = function(show){
       $scope.currShow = show;
-      console.log(show);
     };
   });

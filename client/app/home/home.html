@@ -1,10 +1,38 @@
-<div class="yeogurt-info">
-  <h1>Welcome to Yeogurt!</h1>
-  <p>
-    Take a look at the <a href="https://github.com/larsonjj/generator-yeogurt#yeogurt-generator---" data-bypass>documentation</a> and start mixing up something awesome.
-  </p>
-  <p>
-    <img src="/images/yeogurt-swirl.png" width="75px" class="logo" />
-  </p>
+<h1>tv.feeder</h1>
+
+<div class="row dateListings">
+	<div class="col-xs-3 prev">
+		<a class="prevListing btn btn-default" href="/#/listing/{{prevDate}}" ng-show="prevDate">
+			<span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span>
+			{{prevDate | date:'longDate'}}
+		</a>
+	</div>
+	<div class="col-xs-6 curr">
+		<h4>TV Listings for: {{todaysDate | date:'longDate'}}</h4>
+	</div>
+	<div class="col-xs-3 next">
+		<a class="nextListing btn btn-default" href="/#/listing/{{nextDate}}" ng-show="nextDate">
+			{{nextDate | date:'longDate'}}
+			<span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span>
+		</a>
+	</div>
 </div>
-<code class="version">v0.14.2</code>
+<div class="row">
+	<div class="col-xs-8 col-md-8" >
+		<div class="col-xs-12 media showBox" ng-repeat="show in shows | orderBy:'airTime'">
+			<div class="media-left col-xs-height col-full-height">
+				<span class="media-object airTime">{{show.airTime | twelvehour}}</span>
+			</div>
+			<div class="media-body col-xs-height col-full-height">
+				<div class="media-heading title"><h4>
+					<a href="javascript:void(0);" ng-click="setCurrShow(show);">{{show.title}}</a>
+				</h4></div>
+				<div class="description"><p>{{show.description}}</p></div>
+			</div>
+		</div>
+	</div>
+	<div class="col-xs-4 col-md-4">
+		<pre>Title: {{currShow}}</pre>
+
+	</div>
+</div>
