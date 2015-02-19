@@ -12,6 +12,15 @@ angular.module('tvfeeder')
           nextListing:    getNextlisting,
           prevListing:    getPrevlisting
         }
+      })
+      .when('/listing/:date', {
+        templateUrl: '/app/home/home.html',
+        controller: 'HomeCtrl',
+        resolve: {
+          thisDaysShows:  thisDaysShows,
+          nextListing:    getNextlisting,
+          prevListing:    getPrevlisting
+        }
       });
   });
 
