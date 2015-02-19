@@ -16,3 +16,96 @@
 .logo {
   margin-top: 15px;
 }
+
+
+/*Colors*/
+@saturatedBase:   indianred;
+@saturatedLight:  lighten(@saturatedBase, 5%);
+@saturatedDark:   darken(@saturatedBase, 5%);
+@desaturatedBase:   antiquewhite;
+@desaturatedLight:  lighten(@desaturatedBase, 5%);
+@desaturatedDark:   darken(@desaturatedBase, 5%);
+@desaturatedBase2:  navajowhite;
+
+/*Tv Listing Dates*/
+.dateListings {
+  margin-bottom: 15px;
+}
+.dateListings .btn-default {
+  color: @desaturatedBase2;
+  background-color: @saturatedBase;
+  border-color: @saturatedDark;
+  border-radius: 0px;
+}
+
+/*shows*/
+.col-min {
+    /* custom min width */
+    min-width:320px;
+}
+
+.prev {
+  text-align: left;
+}
+
+.curr {
+  text-align: center;
+}
+
+.next {
+  text-align:right;
+}
+
+.showBox {
+  border: 1px solid @desaturatedDark;
+  border-top-color: @desaturatedLight;
+  border-right-color: @desaturatedLight;
+  padding: 0px;
+}
+
+.showBox .media-left {
+  min-width: 100px;
+  background: @saturatedBase;
+  color: @desaturatedBase2;
+  text-align: center;
+  font-weight: bold;
+  padding: 0px;
+}
+
+.showBox .media-body {
+  background: @desaturatedBase;
+  padding: 0px 15px;
+}
+
+
+
+/*http://www.minimit.com/demos/bootstrap-3-responsive-columns-of-same-height*/
+.col-top {
+  vertical-align: top;
+}
+.col-middle {
+  vertical-align: middle;
+}
+.col-bottom {
+  vertical-align: bottom;
+}
+
+/* columns of same height styles */
+
+.row-full-height {
+  height: 100%;
+}
+.col-full-height {
+  height: 100%;
+  vertical-align: middle;
+}
+.row-same-height {
+  display: table;
+  width: 100%;
+  /* fix overflow */
+  table-layout: fixed;
+}
+.col-xs-height {
+  display: table-cell;
+  float: none !important;
+}
