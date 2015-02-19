@@ -10,5 +10,3 @@ angular.module('tvfeeder', [
 
   $locationProvider.html5Mode(false);
 }]);
-
-console.log('Welcome to Yeogurt!');
