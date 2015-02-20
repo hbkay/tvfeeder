@@ -17,7 +17,7 @@
 		</a>
 	</div>
 </div>
-<div class="row">
+<div class="row row-same-height">
 	<div class="col-xs-8 col-md-8" >
 		<div class="col-xs-12 media showBox" ng-repeat="show in shows | orderBy:'airTime'">
 			<div class="media-left col-xs-height col-full-height">
@@ -31,8 +31,14 @@
 			</div>
 		</div>
 	</div>
-	<div class="col-xs-4 col-md-4">
-		<pre ng-show="currShow">{{currShow}}</pre>
-
+	<div class="showInfo col-xs-4 col-xs-height" ng-show="currShow">
+		<div class="row row-same-height">
+			<div class="col-xs-1 infoClicker col-xs-height col-middle ">
+				<a class="hideShowInfo" href="javascript:void(0);" ng-click="currShow=''"><span class="glyphicon glyphicon glyphicon glyphicon-triangle-right" aria-hidden="true"></span></a>
+			</div>
+			<div class="col-xs-11 col-xs-height infoContent">
+				{{currShow}}
+			</div>
+		</div>
 	</div>
 </div>
