@@ -37,7 +37,14 @@
 				<a class="hideShowInfo" href="javascript:void(0);" ng-click="currShow=''"><span class="glyphicon glyphicon glyphicon glyphicon-triangle-right" aria-hidden="true"></span></a>
 			</div>
 			<div class="col-xs-11 col-xs-height infoContent">
-				{{currShow}}
+				<div class="row">
+					<div class="col-xs-3 col-sm-12 col-md-4 tag">Title:</div>
+					<div class="col-xs-9 col-sm-12 col-md-8">{{currShow.title}}</div>
+					<div class="col-xs-3 col-sm-12 col-md-4 tag">Date:</div>
+					<div class="col-xs-9 col-md-12 col-md-8">{{currShow.date | date:'medium'}}</div>
+					<div class="col-xs-3 col-sm-12 col-lg-4 tag">Description:</div>
+					<div class="col-xs-9 col-sm-12 col-lg-8">{{currShow.description}}</div>
+				</div>
 			</div>
 		</div>
 	</div>
