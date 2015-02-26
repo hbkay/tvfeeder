@@ -112,7 +112,7 @@
 
 .showInfo {
   position: fixed;
-  top: 0;
+  /*top: 0;*/
   right: 0%;
   padding: 9.5px;
   height: 100%;
@@ -135,7 +135,16 @@
 }
 
 .hideShowInfo {
-  float: right;
+  
+}
+
+@media (max-width: 767px) {
+  .showInfo {
+    height: inherit;
+    top: inherit;
+    bottom: 0;
+    width: 100%;
+  }
 }
 
 /* Animations */
