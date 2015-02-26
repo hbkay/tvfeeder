@@ -2,7 +2,8 @@
 
 // Declare app level module which depends on views, and components
 angular.module('tvfeeder', [
-  'ngRoute'
+  'ngRoute',
+  'ngAnimate'
 ])
 
 .config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
