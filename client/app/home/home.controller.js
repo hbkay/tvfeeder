@@ -10,6 +10,10 @@ angular.module('tvfeeder')
     $scope.shows = thisDaysShows.data;
     
     $scope.setCurrShow = function(show){
-      $scope.currShow = show;
+      if ($scope.currShow) {
+        $scope.currShow = undefined;
+      } else {
+        $scope.currShow = show;
+      }
     };
   });
